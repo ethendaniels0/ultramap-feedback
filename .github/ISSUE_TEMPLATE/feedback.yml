@@ -1,0 +1,82 @@
+ name: Feedback & Feature Request
+  description: Share feedback or request a new feature
+  title: "[Feedback]: "
+  labels: ["feedback", "needs-review"]
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          Thanks for sharing your feedback! Whether it's a feature request, improvement idea, or general feedback, we'd love to hear it.
+
+    - type: dropdown
+      id: type
+      attributes:
+        label: Feedback Type
+        description: What kind of feedback is this?
+        options:
+          - "Feature Request"
+          - "Improvement to Existing Feature"
+          - "General Feedback"
+          - "User Experience"
+        default: 0
+      validations:
+        required: true
+
+    - type: textarea
+      id: description
+      attributes:
+        label: Description
+        description: Describe your feedback or feature request
+        placeholder: "I would love to see... / It would be great if... / I noticed that..."
+      validations:
+        required: true
+
+    - type: textarea
+      id: problem
+      attributes:
+        label: Problem or Use Case
+        description: What problem does this solve? What's the use case?
+        placeholder: "I'm trying to... / I'm frustrated when... / This would help me..."
+      validations:
+        required: true
+
+    - type: textarea
+      id: solution
+      attributes:
+        label: Proposed Solution (Optional)
+        description: How would you like this to work? Any ideas on implementation?
+        placeholder: "It could work like... / Maybe add a button that... / Similar to how X works..."
+      validations:
+        required: false
+
+    - type: textarea
+      id: alternatives
+      attributes:
+        label: Alternatives Considered
+        description: Have you thought of other ways to solve this?
+        placeholder: "I also considered... / Another approach could be..."
+      validations:
+        required: false
+
+    - type: dropdown
+      id: priority
+      attributes:
+        label: Priority
+        description: How important is this to you?
+        options:
+          - "Critical (blocking my workflow)"
+          - "High (would significantly improve my experience)"
+          - "Medium (nice to have)"
+          - "Low (minor improvement)"
+        default: 2
+      validations:
+        required: true
+
+    - type: textarea
+      id: additional
+      attributes:
+        label: Additional Context
+        description: Any other context, screenshots, mockups, or examples
+        placeholder: "Add any screenshots, mockups, or links to similar features"
+      validations:
+        required: false
