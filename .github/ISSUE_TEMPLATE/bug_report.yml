@@ -62,21 +62,3 @@
         default: 2
       validations:
         required: true
-
-    - type: textarea
-      id: board-info
-      attributes:
-        label: Board Information
-        description: Information about your current board
-        placeholder: "Nodes: X, Edges: Y"
-      validations:
-        required: false
-
-    - type: textarea
-      id: additional
-      attributes:
-        label: Additional Context
-        description: Any other context, screenshots, or information
-        placeholder: "Add any screenshots or additional details here"
-      validations:
-        required: false
