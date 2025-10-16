@@ -1,7 +1,9 @@
- name: Bug Report
+  name: Bug Report
   description: Report a bug or issue with Ultramap
   title: "[Bug]: "
-  labels: ["bug", "needs-triage"]
+  labels:
+    - bug
+    - needs-triage
   body:
     - type: markdown
       attributes:
@@ -22,7 +24,7 @@
       attributes:
         label: Operating System
         description: What OS are you running?
-        placeholder: "macOS 14.5"
+        placeholder: "Windows 10/11"
       validations:
         required: true
 
@@ -65,7 +67,7 @@
       id: board-info
       attributes:
         label: Board Information
-        description: Information about your current board (auto-filled)
+        description: Information about your current board
         placeholder: "Nodes: X, Edges: Y"
       validations:
         required: false
