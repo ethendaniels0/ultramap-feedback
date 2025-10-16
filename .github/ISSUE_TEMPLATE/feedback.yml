@@ -1,7 +1,9 @@
- name: Feedback & Feature Request
+  name: Feedback & Feature Request
   description: Share feedback or request a new feature
   title: "[Feedback]: "
-  labels: ["feedback", "needs-review"]
+  labels:
+    - feedback
+    - needs-review
   body:
     - type: markdown
       attributes:
@@ -43,7 +45,7 @@
     - type: textarea
       id: solution
       attributes:
-        label: Proposed Solution (Optional)
+        label: Proposed Solution
         description: How would you like this to work? Any ideas on implementation?
         placeholder: "It could work like... / Maybe add a button that... / Similar to how X works..."
       validations:
