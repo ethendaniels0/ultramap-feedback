@@ -1,0 +1,80 @@
+ name: Bug Report
+  description: Report a bug or issue with Ultramap
+  title: "[Bug]: "
+  labels: ["bug", "needs-triage"]
+  body:
+    - type: markdown
+      attributes:
+        value: |
+          Thanks for taking the time to report a bug! Please fill out the information below.
+
+    - type: input
+      id: app-version
+      attributes:
+        label: App Version
+        description: What version of Ultramap are you using?
+        placeholder: "0.1.0"
+      validations:
+        required: true
+
+    - type: input
+      id: os
+      attributes:
+        label: Operating System
+        description: What OS are you running?
+        placeholder: "macOS 14.5"
+      validations:
+        required: true
+
+    - type: textarea
+      id: description
+      attributes:
+        label: Bug Description
+        description: A clear description of what the bug is
+        placeholder: "When I try to..., the app..."
+      validations:
+        required: true
+
+    - type: textarea
+      id: steps
+      attributes:
+        label: Steps to Reproduce
+        description: How can we reproduce this bug?
+        placeholder: |
+          1. Go to...
+          2. Click on...
+          3. See error...
+      validations:
+        required: false
+
+    - type: dropdown
+      id: severity
+      attributes:
+        label: Severity
+        description: How severe is this bug?
+        options:
+          - "Critical (app crashes or data loss)"
+          - "High (major feature broken)"
+          - "Medium (annoying but workaround exists)"
+          - "Low (minor visual issue)"
+        default: 2
+      validations:
+        required: true
+
+    - type: textarea
+      id: board-info
+      attributes:
+        label: Board Information
+        description: Information about your current board (auto-filled)
+        placeholder: "Nodes: X, Edges: Y"
+      validations:
+        required: false
+
+    - type: textarea
+      id: additional
+      attributes:
+        label: Additional Context
+        description: Any other context, screenshots, or information
+        placeholder: "Add any screenshots or additional details here"
+      validations:
+        required: false
